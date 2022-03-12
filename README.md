@@ -10,40 +10,12 @@ This application was created using JavaScript, React, MongoDB, Node.js/Express.j
 
 ## Application
 
-GIVEN a book search engine
-WHEN I load the search engine
-THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
-WHEN I click on the Search for Books menu option
-THEN I am presented with an input field to search for books and a submit button
-WHEN I am not logged in and enter a search term in the input field and click the submit button
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site
-WHEN I click on the Login/Signup menu option
-THEN a modal appears on the screen with a toggle between the option to log in or sign up
-WHEN the toggle is set to Signup
-THEN I am presented with three inputs for a username, an email address, and a password, and a signup button
-WHEN the toggle is set to Login
-THEN I am presented with two inputs for an email address and a password and login button
-WHEN I enter a valid email address and create a password and click on the signup button
-THEN my user account is created and I am logged in to the site
-WHEN I enter my account’s email address and password and click on the login button
-THEN I the modal closes and I am logged in to the site
-WHEN I am logged in to the site
-THEN the menu options change to Search for Books, an option to see my saved books, and Logout
-WHEN I am logged in and enter a search term in the input field and click the submit button
-THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account
-WHEN I click on the Save button on a book
-THEN that book’s information is saved to my account
-WHEN I click on the option to see my saved books
-THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account
-WHEN I click on the Remove button on a book
-THEN that book is deleted from my saved books list
-WHEN I click on the Logout button
-THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
+When the user begins using the search engine, they see a menu with options to look for books and login or signup. If they click on the option to search for books, they can enter a book title and click on the submit button. The user will see the search results, which will include the following for each book that pops up: title, author, description, image, and a link to Google Books for that specific book. The user also has the option to log in or sign up on the site. When the user selects the signup option, they are prompted to enter a username, their email address, and a password. If they have already signed up, they can click on the login option, and they will be prompted to enter their email address and password. Once the user is logged in, they will have an added feature- their saved books. If they do a search while logged in, they have the option to save books, and also to a feature that shows them all their saved books. The user also has the option to remove a saved book from their list, which they can do by clicking on the remove button. Once the user is done, they can log out by clicking on the logout button.
 
 ## Website
 
 The following image shows a screenshot of the application: ![ApplicationScreenshot]()
 
-You can access the website here: 
+You can access the website here: https://fast-journey-32879.herokuapp.com/. 
 
 You can access the GitHub repository here: https://github.com/fssaberi/book-search-engine.git. 
