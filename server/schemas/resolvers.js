@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Book, User } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -27,7 +27,7 @@ const resolvers = {
             const token = signToken(user);
       
             return { token, user };
-          },
+        },
 
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
@@ -44,8 +44,7 @@ const resolvers = {
       
             const token = signToken(user);
             return { token, user };
-        }
-    },
+        },
 
         saveBook: async (parent, { input }, context) => {
             if (context.user) {
@@ -74,6 +73,7 @@ const resolvers = {
 
             throw new AuthenticationError("Couldn't find a user with this id!");
         }
+    }
 };
 
 module.exports = resolvers;
