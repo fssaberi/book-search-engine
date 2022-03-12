@@ -47,13 +47,33 @@ const resolvers = {
         }
     },
 
-        // saveBook: {
+        saveBook: async (parent, { input }, context) => {
+            if (context.user) {
+                const updatedUser = await User.findOneandUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { savedBooks: input } },
+                    { new: true, runValidators: true }
+                )
 
-        // },
+                return updatedUser;
+            }
 
-        // removeBook: {
+            throw new AuthenticationError('Not logged in!')
+        },
 
-        // }
+        removeBook: async (parent, { bookId }, context) => {
+            if (context.user) {
+                const updatedUser = await User.findOneandUpdate(
+                    { _id: context.user._id },
+                    { $pull: { savedBooks: { bookId: bookId } } },
+                    { new: true }
+                )
+
+                return updatedUser;
+            }
+
+            throw new AuthenticationError("Couldn't find a user with this id!");
+        }
 };
 
 module.exports = resolvers;
